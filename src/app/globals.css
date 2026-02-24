@@ -1,0 +1,150 @@
+@import '../styles/glassmorphism.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-bg: #0a0f1e;
+    --color-surface1: #141b2d;
+    --color-surface2: #1e2840;
+    --color-cyan: #00e5ff;
+    --color-magenta: #ff0090;
+    --color-volt: #faff00;
+    --color-ink-100: #f0f4ff;
+    --color-ink-200: #b8c4e0;
+    --color-ink-300: #6b7a99;
+    --color-ink-400: #3a4560;
+}
+
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-ink-100);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-ink-400);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink-300);
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(0, 229, 255, 0.3);
+    color: white;
+}
+
+/* Hero mesh background */
+.bg-hero-mesh {
+    background: radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 144, 0.06) 0%, transparent 50%),
+        var(--color-bg);
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Perspective for 3D cards */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* Glow shadow utilities */
+.shadow-glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* Display size for large fonts */
+.text-display-md {
+    font-size: clamp(28px, 3vw, 48px);
+    line-height: 1.15;
+}
+
+/* Typography utility classes */
+@layer utilities {
+    .text-display-2xl {
+        font-size: clamp(80px, 12vw, 200px);
+        line-height: 0.9;
+    }
+
+    .text-display-xl {
+        font-size: clamp(48px, 6vw, 96px);
+        line-height: 1;
+    }
+
+    .text-display-lg {
+        font-size: clamp(36px, 4vw, 64px);
+        line-height: 1.1;
+    }
+
+    .text-heading-xl {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .text-heading-lg {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .text-heading-md {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .text-body-lg {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .text-body-md {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .text-mono-md {
+        font-size: 14px;
+        font-family: var(--font-jetbrains), monospace;
+    }
+
+    .text-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+    }
+}
