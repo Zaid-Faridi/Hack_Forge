@@ -2,14 +2,17 @@
 
 # ⚡ HackForge
 
-### Discover, Host & Conquer Hackathons Worldwide
+**Discover, Host & Conquer Hackathons Worldwide**
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-ff0055?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-> **HackForge** is a premium, full-featured hackathon discovery and hosting platform built with cutting‑edge web technologies. Whether you're a participant looking for your next challenge or an organizer ready to launch a world‑class event — HackForge has you covered.
+HackForge is a modern, full-featured hackathon platform where **participants** can discover and join hackathons, and **organizers** can create and manage events — all wrapped in a premium glassmorphism dark UI with cinematic animations.
+
+[Live Demo](#) · [Report Bug](https://github.com/Zaid-Faridi/Hack_Forge/issues) · [Request Feature](https://github.com/Zaid-Faridi/Hack_Forge/issues)
 
 </div>
 
@@ -17,317 +20,307 @@
 
 ## 📋 Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Environment Variables](#-environment-variables)
-- [Available Scripts](#-available-scripts)
-- [Routes & Pages](#-routes--pages)
-- [Architecture](#-architecture)
-- [Design System](#-design-system)
-- [Authentication](#-authentication)
-- [State Management](#-state-management)
-- [Animations](#-animations)
-- [Components](#-components)
-- [Contributing](#-contributing)
-- [License](#-license)
+1. [Why HackForge?](#-why-hackforge)
+2. [Key Features](#-key-features)
+3. [Screenshots & Pages](#-screenshots--pages)
+4. [Tech Stack](#-tech-stack)
+5. [Getting Started](#-getting-started)
+6. [Project Structure](#-project-structure)
+7. [How It Works](#-how-it-works)
+8. [Design System](#-design-system)
+9. [Routes Reference](#-routes-reference)
+10. [Contributing](#-contributing)
+11. [License](#-license)
 
 ---
 
-## ✨ Features
+## 💡 Why HackForge?
 
-### For Participants
-- 🔍 **Discover Hackathons** — Browse, search, and filter events by status, mode, tech domain, and more
-- 🎯 **3D Interactive Cards** — Mouse‑tilt parallax hackathon cards with depth effects
-- 📊 **Personal Dashboard** — Track your hackathon journey, wins, and upcoming events
-- 🏆 **Hall of Fame** — Explore award‑winning projects and past champions
+Most hackathon platforms feel outdated — plain white layouts, basic forms, and no personality. **HackForge is different.**
 
-### For Organizers
-- 🧙 **Multi‑Step Wizard** — Create hackathons with a guided 6‑step form (Basics → Date & Time → Details → Prizes → Media → Review)
-- 📈 **Organizer Dashboard** — Monitor participants, event views, and prize pools
-- 👁️ **Live Card Preview** — See how your hackathon listing will look as you build it
-- 🎨 **Rich Media Support** — Upload cover images, logos, and connect to your website
+- 🎨 **Premium Dark UI** with frosted-glass (glassmorphism) cards and glowing accents
+- 🎬 **Cinematic Animations** — page transitions, staggered reveals, parallax 3D cards
+- 🔐 **Dual-Role System** — separate experiences for participants and organizers
+- 🧙 **Guided Wizard** — organizers can create events through a 6-step form with live preview
+- ⚡ **Blazing Fast** — powered by Next.js Turbopack for sub-second hot reloads
 
-### Platform‑Wide
-- 🌙 **Dark Mode by Default** — Premium dark theme with cyan, magenta, and volt accents
-- 🪟 **Glassmorphism UI** — Frosted-glass cards with blur, borders, and glow effects
-- 🎬 **Cinematic Animations** — Framer Motion page transitions, staggered reveals, and GSAP scroll triggers
-- 🔐 **Dual‑Role Auth** — Participant and Organizer login flows with NextAuth.js v5
-- 📱 **Fully Responsive** — Desktop‑first design that adapts gracefully to tablets and phones
-- ⚡ **Turbopack** — Lightning‑fast dev server with Next.js Turbopack
+---
+
+## ✨ Key Features
+
+### 🏄 For Participants
+
+| Feature | What It Does |
+|---------|-------------|
+| **Explore & Filter** | Browse hackathons by status (Upcoming, Live, Completed), mode (Online, In-Person, Hybrid), and tech domain (AI/ML, Web3, Cloud, etc.) |
+| **3D Hackathon Cards** | Cards respond to your mouse with a parallax tilt effect — hover to see it in action |
+| **Hackathon Detail Page** | Full event info including timeline, rules, prizes, and a "Register Now" button |
+| **Personal Dashboard** | Track your hackathon journey — events joined, wins, upcoming registrations |
+| **Hall of Fame** | Browse past champions and award-winning projects for inspiration |
+
+### 🏗️ For Organizers
+
+| Feature | What It Does |
+|---------|-------------|
+| **6-Step Creation Wizard** | Build your hackathon listing step-by-step: Basics → Date & Time → Details → Prizes → Media → Review |
+| **Live Card Preview** | See exactly how your hackathon card will look to participants — updates in real-time as you type |
+| **Organizer Dashboard** | Monitor total participants, event views, prize pools, and manage all your events |
+| **Event Management** | Track Draft, Live, and Ended events with participant counts |
+
+### 🌐 Platform-Wide
+
+| Feature | What It Does |
+|---------|-------------|
+| **Glassmorphism UI** | Frosted-glass cards with blur, subtle borders, and hover glow effects |
+| **Animated Hero** | Canvas-based animated scene with floating orbs, twinkling stars, and wireframe shapes |
+| **Page Transitions** | Smooth fade-and-slide animations when navigating between pages |
+| **Responsive Design** | Desktop-first layout that adapts to tablets and mobile screens |
+| **Custom 404 Page** | Even the error page looks good — gradient "404" text with navigation buttons |
+| **Authentication** | Sign in with email/password, Google, or GitHub — role-based access control |
+
+---
+
+## 📸 Screenshots & Pages
+
+| Page | Description |
+|------|-------------|
+| **Landing Page** (`/`) | Animated hero, stats bar (2,500+ hackathons, 150K+ participants), featured events, tech domains, testimonials |
+| **Explore** (`/explore`) | Search bar + filter sidebar + responsive hackathon card grid |
+| **Hackathon Detail** (`/hackathon/[id]`) | About, rules, timeline, prizes, and a sticky registration sidebar |
+| **Hall of Fame** (`/hall-of-fame`) | Grand champion spotlight + runner-up grid with tech stacks and prize amounts |
+| **Login** (`/login`) | Dual-role auth portal — toggle between Participant and Organizer |
+| **Participant Dashboard** (`/dashboard/participant`) | Stats cards, recent activity feed |
+| **Organizer Dashboard** (`/dashboard/organizer`) | Stats cards, event list with status badges, "Create Hackathon" CTA |
+| **Create Hackathon** (`/dashboard/organizer/create`) | 6-step wizard with side-by-side live card preview |
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
-| **Language** | [TypeScript 5.4](https://www.typescriptlang.org/) |
-| **Styling** | [Tailwind CSS 3.4](https://tailwindcss.com/) + Custom Glassmorphism |
-| **Animation** | [Framer Motion 11](https://www.framer.com/motion/) + [GSAP 3.12](https://greensock.com/) |
-| **3D / Canvas** | HTML5 Canvas (animated hero scene with particles & wireframes) |
-| **Authentication** | [NextAuth.js v5 (beta)](https://authjs.dev/) with Credentials, Google, GitHub |
-| **State** | [Zustand 4.5](https://zustand-demo.pmnd.rs/) |
-| **Forms** | [React Hook Form 7](https://react-hook-form.com/) + [Zod 3](https://zod.dev/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Fonts** | Inter, Syne, JetBrains Mono (Google Fonts) |
-| **Utilities** | clsx, tailwind-merge, class-variance-authority |
+### Core Framework
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Next.js** | 16 | React framework with App Router, Turbopack, and server components |
+| **TypeScript** | 5.4 | Type safety across the entire codebase |
+| **React** | 18+ | UI component library |
 
----
+### Styling & Design
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Tailwind CSS** | 3.4 | Utility-first CSS framework — all styling is done through Tailwind classes |
+| **Custom CSS** | — | Glassmorphism card styles, scrollbar customization, selection colors |
 
-## 📁 Project Structure
+### Animation & Interactivity
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Framer Motion** | 11 | Page transitions, staggered reveals, modal animations, hover effects |
+| **GSAP** | 3.12 | Scroll-triggered animations and timeline sequences |
+| **HTML5 Canvas** | — | Animated hero scene (stars, floating orbs, wireframe shapes) |
 
-```
-hackathon-finder/
-├── public/                         # Static assets
-├── src/
-│   ├── app/                        # Next.js App Router
-│   │   ├── (auth)/                 # Auth route group
-│   │   │   ├── login/              # Login page
-│   │   │   ├── register/           # Registration pages
-│   │   │   │   ├── participant/    # Participant registration
-│   │   │   │   └── organizer/      # Organizer registration
-│   │   │   ├── verify/             # Email verification
-│   │   │   ├── forgot-password/    # Password recovery
-│   │   │   └── layout.tsx          # Auth layout (centered card + bg)
-│   │   ├── (main)/                 # Public route group
-│   │   │   ├── explore/            # Hackathon explorer with filters
-│   │   │   ├── hall-of-fame/       # Winners showcase
-│   │   │   ├── hackathon/[id]/     # Hackathon detail page
-│   │   │   ├── page.tsx            # Landing page
-│   │   │   └── layout.tsx          # Main layout (Navbar + Footer)
-│   │   ├── (dashboard)/            # Protected dashboard group
-│   │   │   └── dashboard/
-│   │   │       ├── participant/    # Participant dashboard
-│   │   │       ├── organizer/      # Organizer dashboard
-│   │   │       │   └── create/     # Create hackathon wizard
-│   │   │       └── layout.tsx      # Dashboard layout (Sidebar)
-│   │   ├── api/auth/               # Auth API routes
-│   │   ├── layout.tsx              # Root layout (fonts + metadata)
-│   │   ├── globals.css             # Global styles + Tailwind
-│   │   ├── loading.tsx             # Global loading spinner
-│   │   └── not-found.tsx           # Custom 404 page
-│   ├── components/
-│   │   ├── auth/                   # Auth components
-│   │   │   ├── DualLoginPortal.tsx  # Main auth portal
-│   │   │   ├── LoginForm.tsx        # Login form
-│   │   │   ├── RegisterForm.tsx     # Registration form
-│   │   │   ├── RoleToggle.tsx       # Participant/Organizer toggle
-│   │   │   ├── SocialAuthButtons.tsx# OAuth buttons
-│   │   │   └── AuthBackground.tsx   # Animated auth background
-│   │   ├── explore/                # Explorer page components
-│   │   │   ├── SearchBar.tsx        # Glowing search input
-│   │   │   ├── FilterSidebar.tsx    # Collapsible filter panel
-│   │   │   ├── FilterGroup.tsx      # Individual filter group
-│   │   │   ├── HackathonCard3D.tsx  # 3D tilt hackathon card
-│   │   │   ├── HackathonGrid.tsx    # Responsive card grid
-│   │   │   ├── ActiveFilters.tsx    # Active filter tags
-│   │   │   └── EmptyState.tsx       # No-results component
-│   │   ├── landing/                # Landing page sections
-│   │   │   ├── HeroScene.tsx        # Canvas animated hero
-│   │   │   ├── HeroSection.tsx      # Hero with CTA
-│   │   │   ├── SplitCTA.tsx         # Participate/Host CTA
-│   │   │   ├── StatsBar.tsx         # Animated statistics
-│   │   │   ├── FeaturedHackathons.tsx# Trending events
-│   │   │   ├── TechDomains.tsx      # Domain categories
-│   │   │   └── Testimonials.tsx     # Scrolling testimonials
-│   │   ├── layout/                 # Layout components
-│   │   │   ├── Navbar.tsx           # Floating glassmorphism nav
-│   │   │   ├── Footer.tsx           # Site footer
-│   │   │   ├── DashboardSidebar.tsx # Dashboard sidebar
-│   │   │   ├── PageTransition.tsx   # Route transition wrapper
-│   │   │   └── CustomCursor.tsx     # Custom cursor effect
-│   │   ├── ui/                     # Reusable UI atoms
-│   │   │   ├── Button.tsx           # CVA button component
-│   │   │   ├── Input.tsx            # Styled input
-│   │   │   ├── Card.tsx             # Glass card wrapper
-│   │   │   ├── Badge.tsx            # Status badge
-│   │   │   ├── Tag.tsx              # Removable tag
-│   │   │   ├── Skeleton.tsx         # Loading skeleton
-│   │   │   ├── Modal.tsx            # Overlay modal
-│   │   │   ├── GradientText.tsx     # Animated gradient text
-│   │   │   ├── GlowDivider.tsx      # Glowing line divider
-│   │   │   ├── MagneticButton.tsx   # Magnetic hover button
-│   │   │   ├── CountUp.tsx          # Number counter animation
-│   │   │   └── NoiseBg.tsx          # Noise texture background
-│   │   └── wizard/                 # Hackathon creation wizard
-│   │       ├── WizardShell.tsx      # Wizard orchestrator
-│   │       ├── WizardProgress.tsx   # Step progress indicator
-│   │       ├── steps/
-│   │       │   ├── Step1_Basics.tsx
-│   │       │   ├── Step2_DateTime.tsx
-│   │       │   ├── Step3_Details.tsx
-│   │       │   ├── Step4_Prizes.tsx
-│   │       │   ├── Step5_Media.tsx
-│   │       │   └── Step6_Review.tsx
-│   │       └── preview/
-│   │           └── LiveCardPreview.tsx
-│   ├── hooks/                      # Custom React hooks
-│   │   ├── useMouseTilt.ts          # Mouse-position tilt
-│   │   ├── useMagneticHover.ts      # Magnetic element effect
-│   │   ├── useScrollReveal.ts       # Scroll-triggered reveal
-│   │   ├── useGSAPTimeline.ts       # GSAP timeline hook
-│   │   ├── useSearch.ts             # Debounced search
-│   │   ├── useWindowSize.ts         # Window dimensions
-│   │   └── useMedia.ts             # Media query hook
-│   ├── lib/
-│   │   ├── animations/             # Animation configs
-│   │   │   ├── variants.ts          # Framer Motion variants
-│   │   │   ├── spring-configs.ts    # Spring presets
-│   │   │   └── gsap.ts             # GSAP utility functions
-│   │   ├── auth/                   # Auth configuration
-│   │   │   └── auth.config.ts       # NextAuth.js config
-│   │   ├── three/                  # Three.js shaders
-│   │   │   └── shaders/
-│   │   │       ├── noise.glsl.ts
-│   │   │       └── glow.glsl.ts
-│   │   ├── validations/            # Zod schemas
-│   │   │   └── auth.ts
-│   │   └── utils/                  # Utility functions
-│   │       ├── cn.ts                # Class name merger
-│   │       ├── constants.ts         # App constants
-│   │       └── format.ts           # Formatters
-│   ├── stores/                     # Zustand stores
-│   │   ├── authStore.ts             # Auth state
-│   │   ├── filterStore.ts           # Explorer filters
-│   │   ├── wizardStore.ts           # Wizard form state
-│   │   └── uiStore.ts              # UI state (sidebar, cursor)
-│   ├── styles/
-│   │   └── glassmorphism.css        # Glassmorphism styles
-│   ├── middleware.ts               # Route protection
-│   └── types/
-│       └── next-auth.d.ts          # NextAuth type augmentation
-├── .env.local                      # Environment variables
-├── next.config.mjs                 # Next.js configuration
-├── tailwind.config.ts              # Tailwind theme
-├── tsconfig.json                   # TypeScript config
-├── postcss.config.js               # PostCSS config
-└── package.json                    # Dependencies & scripts
-```
+### State & Data
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Zustand** | 4.5 | Lightweight global state management (4 stores) |
+| **React Hook Form** | 7 | Performant form handling with validation |
+| **Zod** | 3 | Schema-based form validation |
+
+### Authentication
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **NextAuth.js** | v5 beta | Authentication with Credentials, Google, and GitHub providers |
+
+### Utilities
+| Technology | Purpose |
+|-----------|---------|
+| **Lucide React** | Beautiful, consistent SVG icons |
+| **clsx + tailwind-merge** | Conditional and conflict-free class name merging |
+| **class-variance-authority** | Type-safe component variants (Button, Badge, etc.) |
+
+### Fonts (Google Fonts)
+| Font | Usage |
+|------|-------|
+| **Inter** | Body text, UI elements |
+| **Syne** | Display headings, hero text |
+| **JetBrains Mono** | Prices, dates, code snippets |
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### What You Need
+- **Node.js** version 18 or higher
+- **npm** version 9 or higher (comes with Node.js)
+- A **GitHub account** (optional — for OAuth login)
 
-- **Node.js** ≥ 18.0
-- **npm** ≥ 9.0 (or yarn / pnpm)
-
-### Installation
+### Step 1: Clone the Repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/hackforge.git
-cd hackforge
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.local.example .env.local
-# Edit .env.local with your values (see below)
-
-# Start the development server
-npm run dev
+git clone https://github.com/Zaid-Faridi/Hack_Forge.git
+cd Hack_Forge
 ```
 
-The app will be available at **http://localhost:3000**.
+### Step 2: Install Dependencies
 
----
+```bash
+npm install
+```
 
-## 🔑 Environment Variables
+This installs all required packages (~280 packages). You may see some deprecation warnings — these are safe to ignore.
 
-Create a `.env.local` file in the project root with the following variables:
+### Step 3: Set Up Environment Variables
+
+Create a `.env.local` file in the project root:
 
 ```env
-# NextAuth
+# Required — generate a random string for this
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-key-here
+NEXTAUTH_SECRET=any-random-string-at-least-32-chars-long
 
-# OAuth Providers
+# Optional — only needed if you want Google/GitHub login
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 GITHUB_CLIENT_ID=your-github-client-id
 GITHUB_CLIENT_SECRET=your-github-client-secret
 
-# API
+# API endpoint (for future backend integration)
 NEXT_PUBLIC_API_URL=http://localhost:4000/api
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
-> **Note:** For development, you can use placeholder values. OAuth login will fall back to the credentials provider.
+> **💡 Tip:** For local development, you only need `NEXTAUTH_URL` and `NEXTAUTH_SECRET`. The app works fine without OAuth credentials — it will use the email/password login instead.
 
----
+### Step 4: Start the Development Server
 
-## 📜 Available Scripts
+```bash
+npm run dev
+```
 
-| Command | Description |
+Open **http://localhost:3000** in your browser. The app uses Turbopack for fast compilation — first page load may take a few seconds, subsequent navigations are instant.
+
+### Available Commands
+
+| Command | What It Does |
 |---------|-------------|
-| `npm run dev` | Start development server with Turbopack |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run type-check` | Run TypeScript type checking |
+| `npm run dev` | Start dev server at localhost:3000 (with hot reload) |
+| `npm run build` | Create optimized production build |
+| `npm start` | Run the production build |
+| `npm run lint` | Check code for common issues |
+| `npm run type-check` | Verify TypeScript types are correct |
 
 ---
 
-## 🗺 Routes & Pages
+## 📁 Project Structure
 
-| Route | Description | Auth Required |
-|-------|-------------|:---:|
-| `/` | Landing page with hero, stats, featured hackathons | ❌ |
-| `/explore` | Browse & filter hackathons | ❌ |
-| `/hackathon/[id]` | Hackathon detail page | ❌ |
-| `/hall-of-fame` | Winners showcase | ❌ |
-| `/login` | Authentication portal | ❌ |
-| `/register/participant` | Participant registration | ❌ |
-| `/register/organizer` | Organizer registration | ❌ |
-| `/verify` | Email verification | ❌ |
-| `/forgot-password` | Password reset | ❌ |
-| `/dashboard/participant` | Participant dashboard | ✅ |
-| `/dashboard/organizer` | Organizer dashboard | ✅ |
-| `/dashboard/organizer/create` | Create hackathon wizard | ✅ |
+Here's how the codebase is organized. Each folder has a clear responsibility:
+
+```
+src/
+├── app/                          # 📄 Pages & Routing (Next.js App Router)
+│   ├── (auth)/                   #    Auth pages (login, register, verify)
+│   ├── (main)/                   #    Public pages (landing, explore, detail)
+│   ├── (dashboard)/              #    Protected pages (participant, organizer)
+│   ├── api/                      #    API routes (auth endpoints)
+│   ├── layout.tsx                #    Root layout (fonts, metadata)
+│   ├── globals.css               #    Global styles + Tailwind directives
+│   ├── not-found.tsx             #    Custom 404 page
+│   └── loading.tsx               #    Global loading spinner
+│
+├── components/                   # 🧩 Reusable Components
+│   ├── ui/                       #    12 atoms: Button, Card, Badge, Input, Modal, etc.
+│   ├── layout/                   #    Navbar, Footer, Sidebar, Cursor, PageTransition
+│   ├── auth/                     #    Login/Register forms, role toggle, OAuth buttons
+│   ├── landing/                  #    Hero, stats, featured hackathons, testimonials
+│   ├── explore/                  #    Search, filters, 3D cards, grid
+│   └── wizard/                   #    6-step creation wizard + live preview
+│
+├── hooks/                        # 🪝 7 Custom Hooks
+│   ├── useMouseTilt.ts           #    Mouse-position 3D tilt for cards
+│   ├── useSearch.ts              #    Debounced search (300ms delay)
+│   ├── useScrollReveal.ts        #    Animate elements on scroll
+│   └── ...                       #    useWindowSize, useMedia, etc.
+│
+├── stores/                       # 🗃️ 4 Zustand Stores
+│   ├── authStore.ts              #    User session, role, auth status
+│   ├── filterStore.ts            #    Explorer page filter state
+│   ├── wizardStore.ts            #    Multi-step form data & navigation
+│   └── uiStore.ts                #    Sidebar, cursor, modal state
+│
+├── lib/                          # 🔧 Utilities & Configuration
+│   ├── animations/               #    Framer Motion variants + GSAP helpers
+│   ├── auth/                     #    NextAuth.js configuration
+│   ├── validations/              #    Zod schemas for form validation
+│   └── utils/                    #    cn(), constants, formatters
+│
+├── styles/                       # 🎨 Additional CSS
+│   └── glassmorphism.css         #    .glass-card styles
+│
+├── types/                        # 📝 TypeScript Interfaces
+│   ├── hackathon.ts              #    Hackathon data shape
+│   ├── user.ts                   #    User profile shape
+│   └── next-auth.d.ts            #    NextAuth type augmentation
+│
+└── middleware.ts                 # 🛡️ Route protection (auth checks)
+```
+
+### Why This Structure?
+
+- **Route Groups** `(auth)`, `(main)`, `(dashboard)` — each has its own layout (centered card, navbar+footer, sidebar) without affecting URLs
+- **Component Categories** — atoms in `ui/`, feature components in their own folders
+- **Colocation** — each page's loading state lives next to it (`explore/loading.tsx`)
+- **Separation of Concerns** — stores, hooks, utils, and types are all in dedicated folders
 
 ---
 
-## 🏗 Architecture
+## 🎯 How It Works
 
-HackForge follows the **Next.js App Router** conventions with clear separation of concerns:
+### User Flows
 
+#### 1. Discovering a Hackathon (Participant)
 ```
-┌─────────────────────────────────────────────┐
-│              Route Groups                    │
-│  (auth)  │  (main)  │  (dashboard)          │
-│  ↓          ↓           ↓                    │
-│  AuthLayout MainLayout  DashboardLayout      │
-│  (centered) (Nav+Footer)(Sidebar+Content)    │
-└─────────────────────────────────────────────┘
-          ↓              ↓                ↓
-   ┌──────────┐  ┌──────────────┐  ┌──────────┐
-   │ Auth     │  │ Landing      │  │ Dashboard│
-   │ Components│ │ Explorer     │  │ Wizard   │
-   │          │  │ Detail       │  │          │
-   └──────────┘  └──────────────┘  └──────────┘
-          ↓              ↓                ↓
-   ┌──────────────────────────────────────────┐
-   │          Shared UI Components            │
-   │  Button · Card · Badge · Input · Modal   │
-   └──────────────────────────────────────────┘
-          ↓              ↓                ↓
-   ┌──────────────────────────────────────────┐
-   │    Stores (Zustand) · Hooks · Utils      │
-   └──────────────────────────────────────────┘
+Landing Page → Click "Explore" → Filter by tech domain/mode
+→ Click a hackathon card → View details, timeline, prizes
+→ Click "Register Now"
 ```
 
-### Key Patterns
+#### 2. Creating a Hackathon (Organizer)
+```
+Login as Organizer → Dashboard → Click "Create Hackathon"
+→ Step 1: Name, tagline, mode, domains
+→ Step 2: Dates, times, location
+→ Step 3: Description, rules, team size
+→ Step 4: Prize pool and placement prizes
+→ Step 5: Cover image, logo, website URL
+→ Step 6: Review everything → Publish
+```
 
-- **Route Groups** — `(auth)`, `(main)`, `(dashboard)` provide separate layouts without affecting URL structure
-- **Compound Components** — Complex UI like `DualLoginPortal` composes smaller atoms (RoleToggle, LoginForm, etc.)
-- **Zustand Stores** — Lightweight global state for auth, filters, wizard form, and UI controls
-- **CVA (Class Variance Authority)** — Type‑safe component variants for `Button`, `Badge`, etc.
+#### 3. Authentication
+```
+Click "Sign In" → Toggle between Participant/Organizer role
+→ Login with email/password OR Google/GitHub
+→ Redirected to role-specific dashboard
+```
+
+### State Management (Zustand)
+
+The app uses 4 lightweight Zustand stores instead of Redux:
+
+| Store | What It Manages | Example Usage |
+|-------|----------------|---------------|
+| `authStore` | Who is logged in and their role | Navbar shows different buttons based on auth state |
+| `filterStore` | Active filters on the Explore page | Sidebar checkboxes ↔ card grid stay in sync |
+| `wizardStore` | Current step and form data in the wizard | Navigate back/forward without losing data |
+| `uiStore` | Sidebar collapsed state, modal visibility | Dashboard sidebar toggle |
+
+### Animation System
+
+| Type | Technology | Where It's Used |
+|------|-----------|----------------|
+| **Page transitions** | Framer Motion | Every route change fades/slides |
+| **Staggered reveals** | Framer Motion | Card grids, stat numbers, testimonials |
+| **3D card tilt** | Custom `useMouseTilt` hook | Hackathon cards on the Explore page |
+| **Scroll animations** | GSAP ScrollTrigger | Elements animate as you scroll past them |
+| **Hero background** | HTML5 Canvas | Floating orbs, stars, and wireframe shapes |
+| **Count-up numbers** | Custom `CountUp` component | Stats bar (2,500+ hackathons, etc.) |
 
 ---
 
@@ -335,162 +328,98 @@ HackForge follows the **Next.js App Router** conventions with clear separation o
 
 ### Color Palette
 
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `bg` | `#0a0f1e` | Page background |
-| `surface1` | `#141b2d` | Card backgrounds |
-| `surface2` | `#1e2840` | Elevated surfaces |
-| `cyan` | `#00e5ff` | Primary accent, CTAs, links |
-| `magenta` | `#ff0090` | Organizer accent, secondary CTAs |
-| `volt` | `#faff00` | Highlights, prize amounts, badges |
-| `ink-100` | `#f0f4ff` | Primary text |
-| `ink-200` | `#b8c4e0` | Secondary text |
-| `ink-300` | `#6b7a99` | Muted text |
-| `ink-400` | `#3a4560` | Borders, dividers |
+The design uses a **dark navy base** with three accent colors:
 
-### Typography
+| Color | Hex | Where It's Used |
+|-------|-----|----------------|
+| 🌑 Background | `#0a0f1e` | Page background |
+| 🔵 Surface 1 | `#141b2d` | Card backgrounds |
+| 🔷 Surface 2 | `#1e2840` | Elevated surfaces, tags |
+| 🔷 **Cyan** | `#00e5ff` | Primary accent — buttons, links, participant features |
+| 🔴 **Magenta** | `#ff0090` | Secondary accent — organizer features, highlights |
+| 🟡 **Volt Yellow** | `#faff00` | Prize amounts, special badges, alerts |
+| ⚪ Ink 100 | `#f0f4ff` | Primary text |
+| 🔘 Ink 200 | `#b8c4e0` | Secondary text |
+| 🔘 Ink 300 | `#6b7a99` | Muted text, placeholders |
+| 🔘 Ink 400 | `#3a4560` | Borders, dividers |
 
-| Class | Font | Usage |
-|-------|------|-------|
-| `font-sans` | Inter | Body text, UI elements |
-| `font-display` | Syne | Headings, hero text |
-| `font-mono` | JetBrains Mono | Prices, code, dates |
+### Glassmorphism Effect
 
-### Glassmorphism
+All card surfaces use a shared `.glass-card` class that creates the frosted-glass look:
 
-All card surfaces use a shared `.glass-card` class:
 ```css
 .glass-card {
-  background: rgba(20, 27, 45, 0.6);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
-              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  background: rgba(20, 27, 45, 0.6);      /* semi-transparent dark */
+  backdrop-filter: blur(16px);              /* frosted glass blur */
+  border: 1px solid rgba(255,255,255,0.06); /* subtle white border */
+  border-radius: 16px;                      /* rounded corners */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);  /* depth shadow */
+}
+
+/* On hover — cyan glow appears */
+.glass-card:hover {
+  border-color: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.08);
 }
 ```
 
 ---
 
-## 🔐 Authentication
+## 🗺 Routes Reference
 
-HackForge uses **NextAuth.js v5** with a dual‑role system:
-
-### Providers
-- **Credentials** — Email + password login
-- **Google OAuth** — Social login
-- **GitHub OAuth** — Social login (developer-focused)
-
-### Roles
-| Role | Access |
-|------|--------|
-| `PARTICIPANT` | Browse, register for hackathons, personal dashboard |
-| `ORGANIZER` | All participant features + create/manage hackathons |
-
-### Flow
-1. User selects role via `RoleToggle` component
-2. Login/Register form adapts based on role
-3. JWT callback injects `role` and `orgId` into token
-4. Session callback exposes role info to client
-5. Middleware protects `/dashboard/*` routes
-
----
-
-## 🗃 State Management
-
-HackForge uses **Zustand** for lightweight, type‑safe global state:
-
-| Store | Purpose | Key State |
-|-------|---------|-----------|
-| `authStore` | Authentication state | `user`, `role`, `isAuthenticated` |
-| `filterStore` | Explorer page filters | `status`, `mode`, `domains`, `query` |
-| `wizardStore` | Hackathon creation wizard | `step`, `formData`, `next()`, `back()` |
-| `uiStore` | Global UI controls | `sidebarOpen`, `cursorVariant`, `modalId` |
-
----
-
-## 🎬 Animations
-
-### Framer Motion
-- **Page Transitions** — Fade + slide via `PageTransition` wrapper
-- **Staggered Reveals** — Card grids animate in sequence using `staggerContainer` variant
-- **Micro‑interactions** — Button hover scales, menu slides, modal fades
-
-### GSAP
-- **Scroll‑triggered** animations via `ScrollTrigger` plugin
-- **Timeline sequences** via `useGSAPTimeline` hook
-- **Magnetic hover** effects via `useMagneticHover` hook
-
-### Canvas Hero Scene
-- Twinkling star field (200 particles)
-- Floating cyan and magenta gradient orbs
-- Animated wireframe geometric shapes
-- Smooth breathing motion with `requestAnimationFrame`
-
----
-
-## 🧩 Components
-
-### UI Atoms (12 components)
-
-| Component | Description |
-|-----------|-------------|
-| `Button` | CVA button with `cyan`, `magenta`, `volt`, `ghost` variants |
-| `Input` | Styled text input with label and error state |
-| `Card` | Glass‑card wrapper with hover glow |
-| `Badge` | Status badge with color variants |
-| `Tag` | Removable filter tag |
-| `Skeleton` | Shimmer loading placeholder |
-| `Modal` | Overlay modal with backdrop |
-| `GradientText` | Animated gradient text (cyan → magenta) |
-| `GlowDivider` | Subtle glowing line separator |
-| `MagneticButton` | Button that magnetically follows cursor |
-| `CountUp` | Animated number counter |
-| `NoiseBg` | SVG noise texture overlay |
-
-### Custom Hooks (7 hooks)
-
-| Hook | Description |
-|------|-------------|
-| `useMouseTilt` | Returns `rotateX`/`rotateY` based on mouse position |
-| `useMagneticHover` | Creates magnetic pull effect on elements |
-| `useScrollReveal` | Triggers animation when element enters viewport |
-| `useGSAPTimeline` | Manages GSAP timeline lifecycle |
-| `useSearch` | Debounced search query with 300ms delay |
-| `useWindowSize` | Reactive `width` / `height` tracking |
-| `useMedia` | CSS media query match listener |
+| Route | Page | Layout | Auth Required |
+|-------|------|--------|:---:|
+| `/` | Landing page | Navbar + Footer | ❌ |
+| `/explore` | Browse hackathons | Navbar + Footer | ❌ |
+| `/hackathon/[id]` | Event details | Navbar + Footer | ❌ |
+| `/hall-of-fame` | Past winners | Navbar + Footer | ❌ |
+| `/login` | Sign in | Centered card | ❌ |
+| `/register/participant` | Sign up (participant) | Centered card | ❌ |
+| `/register/organizer` | Sign up (organizer) | Centered card | ❌ |
+| `/verify` | Email verification | Centered card | ❌ |
+| `/forgot-password` | Password reset | Centered card | ❌ |
+| `/dashboard/participant` | Participant home | Sidebar | ✅ |
+| `/dashboard/organizer` | Organizer home | Sidebar | ✅ |
+| `/dashboard/organizer/create` | Create hackathon | Sidebar | ✅ |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! To get started:
+Contributions, issues, and feature requests are welcome!
+
+### How to Contribute
 
 1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feat/amazing-feature`
-3. **Commit** your changes: `git commit -m 'Add amazing feature'`
-4. **Push** to the branch: `git push origin feat/amazing-feature`
-5. **Open** a Pull Request
+2. **Create** a branch: `git checkout -b feat/your-feature`
+3. **Make** your changes
+4. **Commit**: `git commit -m "feat: add your feature"`
+5. **Push**: `git push origin feat/your-feature`
+6. **Open** a Pull Request
 
-### Code Style
-- TypeScript strict mode enabled
-- Tailwind CSS for all styling (no inline styles)
-- Framer Motion for animations
-- Components should be client components only when interactivity is needed
+### Code Conventions
+
+- Use **TypeScript** for all files (`.ts` / `.tsx`)
+- Use **Tailwind CSS** classes for styling — no inline styles
+- Mark components as `'use client'` only when they need interactivity (event handlers, hooks, state)
+- Follow the existing folder structure when adding new components
+- Use **Zustand** for shared state, **useState** for local component state
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — you are free to use, modify, and distribute it.
 
 ---
 
 <div align="center">
 
-**Built with ❤️ using Next.js, TypeScript & Tailwind CSS**
+**Built with ⚡ by [Zaid Faridi](https://github.com/Zaid-Faridi)**
 
-[Report Bug](https://github.com/your-username/hackforge/issues) · [Request Feature](https://github.com/your-username/hackforge/issues) · [Discussions](https://github.com/your-username/hackforge/discussions)
+Next.js · TypeScript · Tailwind CSS · Framer Motion · Zustand
+
+⭐ Star this repo if you found it useful!
 
 </div>
 ]]>
